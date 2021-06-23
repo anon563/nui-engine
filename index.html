@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>nui engine</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Libs -->
+    <script src="js/lib/gameEngine.js"></script>
+    <script src="js/lib/keyboardListener.js"></script>
+    <script src="js/lib/assets.js"></script>
+    <script src="js/lib/mouse.js"></script>
+
+    <!-- Game -->
+    <script src="js/game/actor.js"></script>
+    <script src="js/game/bullet.js"></script>
+    <script src="js/game/character/character.js"></script>
+    <script src="js/game/character/flare.js"></script>
+    <script src="js/game/character/naan.js"></script>
+    <!-- <script src="js/game/character/watame.js"></script> -->
+
+    <script src="js/game/dust.js"></script>
+
+    <script src="js/game/activity/activity.js"></script>
+    <script src="js/game/activity/stage.js"></script>
+    <script src="js/game/activity/opening.js"></script>
+
+    <script src="js/game/game.js"></script>
+    
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <ul id="nav">
+        <li><button id="nav-save-btn" class="material-icons">save</button></li>
+        <li><button id="nav-load-btn" class="material-icons">drive_folder_upload</button><input id="nav-load-input" type="file" accept=".nui" style="display: none;"></li>
+        <hr>
+        <li><button id="nav-zoom-in-btn" class="material-icons">zoom_in</button></li>
+        <li><button id="nav-zoom-out-btn" class="material-icons">zoom_out</button></li>
+        <li><button id="nav-move-btn" class="nav-mode material-icons">pan_tool</button></li>
+        <li><button id="nav-edit-rooms-btn" class="nav-mode material-icons">grid_on</button></li>
+        <li><button id="nav-edit-tiles-btn" class="nav-mode material-icons">app_registration</button></li>
+        <hr>
+        <li><button id="nav-play-btn" class="material-icons">play_circle_outline</button></li>
+        <li style="display: none;"><input id="tiles-input" type="text" title="Tiles" value="https://files.catbox.moe/twjy6b.png"></li>
+    </ul>
+
+    <canvas id="main-canvas"></canvas>
+
+    <div id="main-menu">
+        <div class="tab">
+            <!-- <button id="menu-level-btn" class="tablinks">Level</button> -->
+            <button id="menu-tiles-btn" class="tablinks">Tiles</button>
+            <button id="menu-colliders-btn" class="tablinks">Colliders</button>
+            <button id="menu-events-btn" class="tablinks">Events</button>
+        </div>
+
+        <div id="tiles" class="menu">
+            <div id="tiles-container" class="container"></div>
+        </div>
+        <div id="events" class="menu">
+            <div id="events-container" class="container"></div>
+        </div>
+    </div>
+
+    <div id="demo-container" style="display: none;">
+        <canvas id="demo-canvas"></canvas>
+    </div>
+</body>
+
+</html>
